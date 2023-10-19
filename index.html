@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>x</title>
+        <style>
+            #name,#age{
+                border: none;
+                border-radius: 3px;
+                box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.553);
+                display: block;
+                margin-left: 5px;
+                margin-bottom: 15px;
+            }
+            #submit{
+                background-color: blueviolet;
+                border-radius: 4px;
+                color: white;
+                border: none;
+                height: 20px;
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="driv-not">you <span class="can ">can</span><span class="cant">cant</span> driv</h1>
+        <input id="age" placeholder="how old are you">
+        <input id="name" placeholder="What's your name">
+        <button id="submit">submit</button>
+        <script>
+            document.getElementById('submit').onclick = function(){
+             let age = document.getElementById('age').value
+             let name = document.getElementById('name').value
+             if (age >= 18) {
+                document.getElementById('driv-not').textContent = `hello ${name} you can driv`
+             } else{
+                document.getElementById('driv-not').textContent = `hello ${name} you can't driv`
+             }
+            }
+      </script>
+    </body>
+</html>
